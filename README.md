@@ -2,4 +2,7 @@
 #### This is an end to end project on image classification.  
 The project features:
 1. Data Cleaning; 
-2. 
+2. Feature Engineering;
+3. CNN model training;
+
+
