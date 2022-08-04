@@ -8,3 +8,5 @@ The project features:
 5. Model deployment to AWS
 
 In progress....
+Model building.
+I'll write an extensive readme when I'm done with the entire project 
