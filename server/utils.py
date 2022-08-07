@@ -37,6 +37,8 @@ def get_clean_image(path, base64_image):
 
 def classify_image(base64_image, file_path=None):
     images = get_clean_image(file_path, base64_image)
+    prediction = []
+
     for image in images:
         # Simply resize the original image, get the wavelet transform image and vertically stack both of them.
         resized_image  = cv2.resize(image, (32, 32))
@@ -46,7 +48,10 @@ def classify_image(base64_image, file_path=None):
         
         len_imagearr = (32*32*3) + (32*32)
 
-        
+        ultimate = stacked_image.reshape(1, len_imagearr).astype(float)
+
+        prediction.append(__model.predict(ultimate)[0])
+        return prediction
 
 def get_image_from_base64_string(base64_string):
     encoded_data = base64_string.split(",")[1]
