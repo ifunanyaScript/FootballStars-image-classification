@@ -68,13 +68,13 @@ def load_aritifacts():
     global __label_name_number
     global __lable_number_name
 
-    with open("C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\label_dict") as f:
+    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\label_dict.json") as f:
         __label_name_number = json.load(f)
         __lable_number_name = {i:k for k,i in __label_name_number.items()}
         
     global __model
     if __model is None:
-        with open("C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle") as f:
+        with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle") as f:
             __model = pickle.load(f)
 
     print("Artifacts succesfully loaded!")
