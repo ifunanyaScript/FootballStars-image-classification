@@ -18,18 +18,29 @@ def get_clean_image(path, base64_image):
         gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         face = detect_face.detectMultiScale(gray_image, 1.3, 5)
 
-        cropped_face = []
+        cropped_faces = []
         for (x, y, w, h) in face:
             region_gray = gray_image[y:y+h, x:x+w]
             region_colour = image[y:y+h, x:x+w]
             eyes = detect_eye.detectMultiScale(region_gray)
             # Check if there are two eyes
             if len(eyes) >= 2:
-                # return the cropped image of the face.
-                return region_colour
+                # Append face if it has two eyes.
+                cropped_faces.append(region_colour)
+                return cropped_faces
 
 def classify_image(base64_image, file_path=None):
-    pass
+    images = get_clean_image(file_path, base64_image)
+    for image in images:
+        # Simply resize the original image, get the wavelet transform image and vertically stack both of them.
+        resized_image  = cv2.resize(image, (32, 32))
+        wavelet_image = wavelet2D(image, Wname="haar", level=5)
+        resized_wavelet_image = cv2.resize(wavelet_image, (32, 32))
+        stacked_image = np.vstack((resized_image.reshape(32*32*3, 1), resized_wavelet_image.reshape(32*32, 1)))
+        
+        len_imagearr = (32*32*3) + (32*32)
+
+        
 
 def get_image_from_base64_string(base64_string):
     encoded_data = base64_string.split(",")[1]
