@@ -5,6 +5,12 @@ import json
 import base64
 from wavelet import wavelet2D
 
+__label_name_number = {}
+__lable_number_name = {}
+__model = None
+
+
+
 def get_clean_image(path, base64_image):
     detect_face = cv2.CascadeClassifier(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\opencv\haarcascade_frontalface_default.xml")
     detect_eye = cv2.CascadeClassifier(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\opencv\haarcascade_eye.xml")
@@ -52,5 +58,24 @@ def get_b64_image():
     with open(".\base64.txt") as f:
         return f.read()
 
+def load_aritifacts():
+    print(f"Loading Artifacts...")
+    global __label_name_number
+    global __lable_number_name
+
+    with open("C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\label_dict") as f:
+        __label_name_number = json.load(f)
+        __lable_number_name = {i:k for k,i in __label_name_number.items()}
+        
+    global __model
+    if __model is None:
+        with open("C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle") as f:
+            __model = pickle.load(f)
+
+    print("Artifacts succesfully loaded!")
+
+
+
 if __name__ == "__main__":
+    load_aritifacts()
     print(classify_image(get_b64_image(), file_path=None))
