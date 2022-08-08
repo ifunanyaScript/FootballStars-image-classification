@@ -73,9 +73,8 @@ def load_aritifacts():
         __lable_number_name = {i:k for k,i in __label_name_number.items()}
         
     global __model
-    if __model is None:
-        with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle") as f:
-            __model = pickle.load(f)
+    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle", "rb") as f:
+        __model = pickle.load(f)
 
     print("Artifacts succesfully loaded!")
 
