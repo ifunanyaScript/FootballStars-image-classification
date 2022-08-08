@@ -1,6 +1,6 @@
+import numpy as np
 import pywt
 import cv2
-import numpy as np
 
 def wavelet2D(image, Wname="haar", level=1):
     # Convert image to grayscale.
