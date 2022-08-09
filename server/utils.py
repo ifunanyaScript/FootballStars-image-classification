@@ -46,11 +46,11 @@ def get_clean_image(base64_string, file_path):
 def load_aritifacts():
     print(f"Loading Artifacts...")
     global __label_name_number
-    global __lable_number_name
+    global __label_number_name
 
     with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\label_dict.json", "r") as f:
         __label_name_number = json.load(f)
-        __lable_number_name = {i:k for k,i in __label_name_number.items()}
+        __label_number_name = {i:k for k,i in __label_name_number.items()}
         
     global __model
     with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle", "rb") as f:
@@ -78,7 +78,7 @@ def classify_image(base64_image, file_path=None):
 
         prediction.append({
             "label": number_name(__model.predict(ultimate)[0]),
-            "label_probability": np.around(__model.predict_proba*100, 2).tolist()[0],
+            "label_probability": np.around(__model.predict_proba(ultimate)*100, 2).tolist()[0],
             "label_dict": __label_name_number
         })
 
