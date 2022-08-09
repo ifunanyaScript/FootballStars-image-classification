@@ -88,4 +88,15 @@ def classify_image(base64_image, file_path=None):
 
 if __name__ == "__main__":
     load_aritifacts()
-    print(classify_image(get_b64_image(), file_path=None))
+    print(classify_image(get_b64_image(), None))
+    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\cr2.jpg"))
+    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\kb1.jpg"))
+    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\kb2.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\lm1.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\mo1.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\mo2.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl1.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl2.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl3.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\zi1.jpg"))
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\zi2.jpg"))
