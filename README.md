@@ -9,4 +9,4 @@ The project features:
 
 In progress....
 Model building.
-I'll write an extensive readme when I'm done with the entire project 
+I'll write an extensive readme when I'm done with the entire project.
