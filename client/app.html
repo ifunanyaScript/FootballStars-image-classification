@@ -11,10 +11,142 @@
 </head>
 
 <body>
-    <div class="img"></div>
+    <div class="backie"></div>
 
     <h2>Football Stars Image Classifier</h2>
-    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col card-wrapper" footballer="cristiano_ronaldo">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/a.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body" test-center mt-4>
+                            <h4 class="text-uppercase card-title">Cristiano Ronaldo</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col card-wrapper" footballer="karim_benzema">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/b.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" test-center mt-4>
+                        <h4 class="text-uppercase card-title">Karim Benzema</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+            <div class="col card-wrapper" footballer="lionel_messi">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/c.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" test-center mt-4>
+                        <h4 class="text-uppercase card-title">Lionel Messi</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+            <div class="col card-wrapper" footballer="mohammed_salah">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/d.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" test-center mt-4>
+                        <h4 class="text-uppercase card-title">Mohammed Salah</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+            <div class="col card-wrapper" footballer="robert_lewandoski">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/e.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" test-center mt-4>
+                        <h4 class="text-uppercase card-title">Robert Lewandoski</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+            <div class="col card-wrapper" footballer="zlatan_ibrahimovic">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/f.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" test-center mt-4>
+                        <h4 class="text-uppercase card-title">Zlatan Ibrahimovic</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone" >
+                            <div class="dz-message needsclick">
+                                <img src="./images/placeholder.png" width="50vw" height="50vw">
+                                <span class="note needsclick">Drag and drop image here or click to upload</span>
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+                <div class="row mt-3">
+                    <button id="submitBtn" type="button" class="btn btn-success">Who is it?</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 error" id="error">
+            <p>Cannot classify image!!! Unable to detect a face and two eyes.</p>
+        </div>
+        <div class="colo-sm-4" id="resultHolder">
+        </div>
+        <div class="col-sm-4" id="divClassTable">
+            <table id="classTable">
+                <tr>
+                    <th>Footballer</th>
+                    <th>Probability(%)</th>
+                </tr>
+                <tr>
+                    <td>Cristiano Ronaldo</td>
+                    <td id="score_cristiano_ronaldo"></td>
+                </tr>
+                <tr>
+                    <td>Karim Benzema</td>
+                    <td id="score_karim_benzema"></td>
+                </tr>
+                <tr>
+                    <td>Lionel Messi</td>
+                    <td id="score_lionel_messi"></td>
+                </tr>
+                <tr>
+                    <td>Mohammed Salah</td>
+                    <td id="score_mohammed_salah"></td>
+                </tr>
+                <tr>
+                    <td>Robert Lewandoski</td>
+                    <td id="score_robert_lewandoski"></td>
+                </tr>
+                <tr>
+                    <td>Zlatan Ibrahimovic</td>
+                    <td id="score_zlatan_ibrahimovic"></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
