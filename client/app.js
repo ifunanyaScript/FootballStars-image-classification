@@ -79,9 +79,9 @@ function init() {
                 let classDictionary = match.label_dict;
                 for(let personName in classDictionary) {
                     let index = classDictionary[personName];
-                    let proabilityScore = match.label_probability[index];
+                    let probabilityScore = match.label_probability[index];
                     let elementName = "#score_" + personName;
-                    $(elementName).html(proabilityScore);
+                    $(elementName).html(probabilityScore);
                 }
             }
             // dz.removeFile(file);            
