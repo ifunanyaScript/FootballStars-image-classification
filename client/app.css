@@ -2,9 +2,9 @@
   margin: 5% 0;
 }
 
-/* You can adjust the image size by increasing/decreasing the width, height */
+/* Adjust the image size by increasing/decreasing the width, height */
 .custom-circle-image {
-width: 10vw; /* note i used vw not px for better responsive */
+width: 10vw; /* Viewport (vw) is better for page responsiveness. */
 height: 10vw;
 }
 
@@ -53,3 +53,5 @@ text-align: left;
 background-color: rgba(214, 50, 9, 0.692);
 color: white;
 }
+
+/* ifunanyaScript */
