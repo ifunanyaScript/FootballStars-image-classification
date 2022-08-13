@@ -1,6 +1,6 @@
 .card-wrapper {
     margin: 5% 0;
-  }
+}
   
 /* You can adjust the image size by increasing/decreasing the width, height */
 .custom-circle-image {
@@ -30,11 +30,11 @@
   grid-row: 20px;
 }
 
-.error {
+.error{
   font-family: MerriweatherRegular;
   font-size: 30px;
   line-height: initial;
-  color: blue;
+  color: rgb(179, 31, 5);
   text-align: center;
 }
 
@@ -53,7 +53,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: rgba(179, 31, 5, 0.836);
   color: white;
 }
 
@@ -80,3 +80,5 @@
 .fnf{
   font-size: 15px;
 }
+
+/*ifunanyaScript*/
