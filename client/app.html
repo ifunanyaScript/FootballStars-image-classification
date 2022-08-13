@@ -7,7 +7,7 @@
     <title>Footballer Stars Image Classifier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dropzone.min.css">
-    <link rel="stylesheet" href="./app1.css">
+    <link rel="stylesheet" href="./app.css">
 </head>
 
 <body>
@@ -18,15 +18,14 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col card-wrapper" data-player="cristiano_ronaldo">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/aa.jpg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4>C. Ronaldo</h4>
-                        </p>
-                    </div>
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/a.jpg" alt="Card image cap">
                 </div>
+                <div class="card-body text-center mt-4">
+                    <p style="font-size:1.5vw ;">C. Ronaldo</p>
+                </div>
+            </div>
             </div>            
             <div class="col card-wrapper" data-player="karim_benzema">
                     <div class="card border-0">
@@ -34,8 +33,7 @@
                             <img class="w-100 h-100" src="./images/b.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body text-center mt-4">
-                            <h4>K. Benzema</h4>
-                            </p>
+                            <p style="font-size:1.5vw ;">K. Benzema</p>
                         </div>
                     </div>
             </div>      
@@ -45,8 +43,7 @@
                         <img class="w-100 h-100" src="./images/c.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4>L. Messi</h4>
-                        </p>
+                        <p style="font-size:1.5vw ;">L. Messi</p>
                     </div>
                 </div>
         </div>      
@@ -56,8 +53,7 @@
                             <img class="w-100 h-100" src="./images/d.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body text-center mt-4">
-                            <h4>M. Salah</h4>
-                            </p>
+                            <p style="font-size:1.5vw ;">M. Salah</p>
                         </div>
                     </div>
             </div>          
@@ -68,8 +64,7 @@
                         <img class="w-100 h-100" src="./images/e.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4>R. Lewandoski</h4>
-                        </p>
+                        <p style="font-size:1.5vw ;">R. Lewandoski</p>
                     </div>
                 </div>
             </div>
@@ -81,8 +76,7 @@
                         <img class="w-100 h-100" src="./images/f.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4>Z. Ibrahimovic</h4>
-                        </p>
+                        <p style="font-size:1.5vw ;">Z. Ibrahimovic</p>
                     </div>
                 </div>
             </div>
@@ -101,15 +95,16 @@
                         </form>
                     </div>
                 </div>
+                
                 <div class="row mt-3">
                     <div class="col-3 mx-auto">
-                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                        <button style="background-color:rgba(179, 31, 5, 0.836);" id="submitBtn" type="button" class="btn btn-md">Classify</button>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-sm-8 error" id="error" >
-                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+
+            <div class="col-sm-8 error" id="error">
+                <p>Cannot classify image! Unable to detect a face with two eyes.</p>    
             </div>
 
             <div class="col-sm-4" id="resultHolder">
@@ -117,28 +112,32 @@
             <div class="col-sm-4" id="divClassTable">
                 <table id="classTable">
                         <tr>
-                            <th>Player</th>
-                            <th>Probability Score</th>
+                            <th>Footballer</th>
+                            <th>Probability(%)</th>
                         </tr>
                         <tr>
-                            <td>Leonel Messi</td>
-                            <td id="score_lionel_messi"></td>
+                            <td>C. Ronaldo</td>
+                            <td id="score_ronaldo"></td>
                         </tr>
                         <tr>
-                            <td>Maria Sharapova</td>
-                            <td id="score_maria_sharapova"></td>
+                            <td>K. Benzema</td>
+                            <td id="score_benzema"></td>
                         </tr>
                         <tr>
-                            <td>Rodger Federer</td>
-                            <td id="score_roger_federer"></td>
+                            <td>L. Messi</td>
+                            <td id="score_messi"></td>
                         </tr>
                         <tr>
-                            <td>Serena Williams</td>
-                            <td id="score_serena_williams"></td>
+                            <td>M. Salah</td>
+                            <td id="score_salah"></td>
                         </tr>
                         <tr>
-                            <td>Virat Kohli</td>
-                            <td id="score_virat_kohli"></td>
+                            <td>R. Lewandoski</td>
+                            <td id="score_lewandoski"></td>
+                        </tr>
+                        <tr>
+                            <td>Z. Ibrahimovic</td>
+                            <td id="score_ibrahimovic"></td>
                         </tr>
                 </table>
             </div>
@@ -154,3 +153,5 @@
 <script src="./dropzone.min.js"></script>
 <script src="./app.js"></script>
 </html>
+
+<!--ifunanyaSCript-->
