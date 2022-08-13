@@ -23,6 +23,36 @@ function init() {
         $.post(url, {
             image_data: file.dataURL
         },function(data, status) {
+
+            /* 
+            Below is a sample response if you have two faces in an image lets say virat and roger together.
+            Most of the time if there is one person in the image you will get only one element in below array
+            data = [
+                {
+                    class: "viral_kohli",
+                    class_probability: [1.05, 12.67, 22.00, 4.5, 91.56],
+                    class_dictionary: {
+                        lionel_messi: 0,
+                        maria_sharapova: 1,
+                        roger_federer: 2,
+                        serena_williams: 3,
+                        virat_kohli: 4
+                    }
+                },
+                {
+                    class: "roder_federer",
+                    class_probability: [7.02, 23.7, 52.00, 6.1, 1.62],
+                    class_dictionary: {
+                        lionel_messi: 0,
+                        maria_sharapova: 1,
+                        roger_federer: 2,
+                        serena_williams: 3,
+                        virat_kohli: 4
+                    }
+                }
+            ]
+            */
+
             console.log(data);
             if (!data || data.length==0) {
                 $("#resultHolder").hide();
@@ -30,12 +60,12 @@ function init() {
                 $("#error").show();
                 return;
             }
-            let players = ["lionel_messi", "maria_sharapova", "roger_federer", "serena_williams", "virat_kohli"];
+            let footballers = ["cristiano_ronaldo", "karim_benzema", "lionel_messi", "mohammed_salah", "robert lewandoski", "zlatan_ibrahimovic"];
             
             let match = null;
             let bestScore = -1;
             for (let i=0;i<data.length;++i) {
-                let maxScoreForThisClass = Math.max(...data[i].class_probability);
+                let maxScoreForThisClass = Math.max(...data[i].label_probability);
                 if(maxScoreForThisClass>bestScore) {
                     match = data[i];
                     bestScore = maxScoreForThisClass;
@@ -45,11 +75,11 @@ function init() {
                 $("#error").hide();
                 $("#resultHolder").show();
                 $("#divClassTable").show();
-                $("#resultHolder").html($(`[data-player="${match.class}"`).html());
-                let classDictionary = match.class_dictionary;
+                $("#resultHolder").html($(`[data-player="${match.label}"`).html());
+                let classDictionary = match.label_dict;
                 for(let personName in classDictionary) {
                     let index = classDictionary[personName];
-                    let proabilityScore = match.class_probability[index];
+                    let proabilityScore = match.label_probability[index];
                     let elementName = "#score_" + personName;
                     $(elementName).html(proabilityScore);
                 }
