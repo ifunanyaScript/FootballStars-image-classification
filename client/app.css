@@ -1,84 +1,55 @@
 .card-wrapper {
-    margin: 5% 0;
+  margin: 5% 0;
 }
-  
+
 /* You can adjust the image size by increasing/decreasing the width, height */
 .custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+width: 10vw; /* note i used vw not px for better responsive */
+height: 10vw;
 }
 
 .custom-circle-image img {
-  object-fit: cover;
+object-fit: cover;
 }
 
 .card-title {
-  letter-spacing: 1.1px;
+letter-spacing: 1.1px;
 }
 
 .card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
+font-family: MerriweatherRegular;
+font-size: 22px;
+line-height: initial;
 }
 
 .dropzone {
-  border-style: dashed;
+border-style: dashed;
 }
 
-.row{
-  grid-row: 20px;
-}
 
-.error{
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: rgb(179, 31, 5);
-  text-align: center;
+.error {
+font-family: MerriweatherRegular;
+font-size: 30px;
+line-height: initial;
+color: rgb(214, 50, 9);
+text-align: center;
 }
 
 #classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
 }
 
 #classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+border: 1px solid #ddd;
+padding: 8px;
 }
 
 #classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgba(179, 31, 5, 0.836);
-  color: white;
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: rgba(214, 50, 9, 0.692);
+color: white;
 }
-
-
-
-.backie{
-    background-image: url('backie.jpg');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-size: 100% 100%;
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(3px);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.fnf{
-  font-size: 15px;
-}
-
-/*ifunanyaScript*/
