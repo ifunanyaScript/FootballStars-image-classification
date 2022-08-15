@@ -28,3 +28,5 @@ def wavelet2D(image, Wname="haar", level=1):
     
     
     return image_r
+
+# ifunanyaScript
