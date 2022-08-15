@@ -48,12 +48,12 @@ def load_aritifacts():
     global __label_name_number
     global __label_number_name
 
-    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\label_dict.json", "r") as f:
+    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\server\artifacts\label_dict.json", "r") as f:
         __label_name_number = json.load(f)
         __label_number_name = {i:k for k,i in __label_name_number.items()}
         
     global __model
-    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\model\artifacts\model.pickle", "rb") as f:
+    with open(r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\server\artifacts\model.pickle", "rb") as f:
         __model = pickle.load(f)
 
     print("Artifacts succesfully loaded!")
@@ -77,26 +77,22 @@ def classify_image(base64_image, file_path=None):
         ultimate = stacked_image.reshape(1, len_imagearr).astype(float)
 
         prediction.append({
-            "label": number_name(__model.predict(ultimate)[0]),
+            "label": __label_number_name[__model.predict(ultimate)[0]],
             "label_probability": np.around(__model.predict_proba(ultimate)*100, 2).tolist()[0],
             "label_dict": __label_name_number
         })
 
     return prediction
 
-
-
 if __name__ == "__main__":
     load_aritifacts()
-    print(classify_image(get_b64_image(), None))
-    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\cr2.jpg"))
-    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\kb1.jpg"))
-    # print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\kb2.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\lm1.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\mo1.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\mo2.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl1.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl2.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\rl3.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\zi1.jpg"))
-    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\zi2.jpg"))
+    print(classify_image(get_b64_image(), None), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\h.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\a.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\b.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\c.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\d.png"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\e.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\f.jpg"), "\n")
+    print(classify_image(None, file_path=r"C:\Users\ifunanyaScript\Everything\FootballStars_image_classification\data\misc_data\g.jpg"), "\n")
+    
