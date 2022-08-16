@@ -12,4 +12,4 @@ CNNs models are generally used for image classification but I decided to use SVM
 ##### Web app development
 A web app that can use the trained model for image classification. 
 ##### Model deployment to AWS
-Hosted the web app on AWS EC2 instance.
+Hosted the web app on AWS EC2 instance (here)[http://ec2-44-203-185-121.compute-1.amazonaws.com/]
