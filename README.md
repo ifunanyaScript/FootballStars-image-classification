@@ -1,6 +1,5 @@
 # An end to end project on image classification.
 Image classification of six famous footballers; Cristiano Ronaldo, Karim Benzema, Lionel Messi, Mohammed Salah, Robert Lewandoski and Zlatan Ibrahimović.
-
 ### The project features:
 ##### Data Cleaning
 In image classification, especially one for classifying people, the most important part of an image is usually the face.  
