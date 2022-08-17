@@ -1,4 +1,5 @@
-# This is an end to end project on image classification.
+# An end to end project on image classification.
+
 The project features:
 
 ##### Data Cleaning
