@@ -1,5 +1,5 @@
 # An end to end project on image classification.
-Image classification of six famous footballers; Cristiano Ronaldo, Karim Benzema, Lionel Messi, Mohammed Salah, Robert Lewandoski and Zlatan Ibrahimović.
+Image classification of six famous footballers; Cristiano Ronaldo, Karim Benzema, Lionel Messi, Mohammed Salah, Robert Lewandoski and Zlatan Ibrahimović. 
 ### The project features:
 ##### Data Cleaning
 In image classification, especially one for classifying people, the most important part of an image is usually the face.  
@@ -12,4 +12,6 @@ CNNs models are generally used for image classification but I decided to use SVM
 ##### Web app development
 A web app in which you can drag and drop an image and get a classification result.
 ##### Model deployment to AWS
-Hosted the web app on AWS EC2 instance [here](http://ec2-44-203-185-121.compute-1.amazonaws.com/)
+Hosted the web app on AWS EC2 instance [here](http://ec2-44-203-185-121.compute-1.amazonaws.com/)  
+<br>
+Apparently, there were series of processes to achieve the final result of this project. All the jupyter notebooks and source codes used to work on the project are all available in this repository. Feel free to fork this repo and drop a 
