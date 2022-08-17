@@ -1,5 +1,5 @@
 # An end to end project on image classification.
-Image classification of six famous footballers; Cristiano Ronaldo, Karim Benzema, Lionel Messi, Mohammed Salah, Robert Lewandoski and Zlatan Ibrahimović. 
+Image classification of six famous footballers; Cristiano Ronaldo, Karim Benzema, Lionel Messi, Mohammed Salah, Robert Lewandoski and Zlatan Ibrahimović.  
 ### The project features:
 ##### Data Cleaning
 In image classification, especially one for classifying people, the most important part of an image is usually the face.  
@@ -8,7 +8,7 @@ irrelevant parts of it. In this case, cropping the face of the person in the ima
 ##### Feature Engineering
 Extracting features from an image is achievable by treating said image as a 2D signal and understanding the image frequency. In a very basic way, one can define the frequency of an image as the changes in the grayscale value of pixels accross the image. 
 ##### Model training
-CNNs models are generally used for image classification but I decided to use SVM classifier. 
+Trained the model(classifier) with over 500 images of the 6 footballers. The model achieved over 91% accuracy on a test dataset. In most cases people use CNNs for image classification, but I used SVM classifier instead.  
 ##### Web app development
 A web app in which you can drag and drop an image and get a classification result.
 ##### Model deployment to AWS
