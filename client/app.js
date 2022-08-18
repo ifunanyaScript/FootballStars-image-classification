@@ -1,7 +1,7 @@
 Dropzone.autoDiscover = false;
 
 function init() {
-    let dz = new Dropzone("#dropzone", {
+    let dropz = new Dropzone("#dropzone", {
         url: "/",
         maxFiles: 1,
         addRemoveLinks: true,
@@ -9,13 +9,13 @@ function init() {
         autoProcessQueue: false
     });
     
-    dz.on("addedfile", function() {
-        if (dz.files[1]!=null) {
-            dz.removeFile(dz.files[0]);        
+    dropz.on("addedfile", function() {
+        if (dropz.files[1]!=null) {
+            dropz.removeFile(dz.files[0]);        
         }
     });
 
-    dz.on("complete", function (file) {
+    dropz.on("complete", function (file) {
         let imageData = file.dataURL;
         
         var url = "/api/classify_image";
