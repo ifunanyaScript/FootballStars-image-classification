@@ -44,8 +44,8 @@ function init() {
             }
             if (match) {
                 $("#error").hide();
-                $("#resultHolder").show();
-                $("#divClassTable").show();
+                $("#resultDiv").show();
+                $("#probabilityTable").show();
                 $("#resultHolder").html($(`[data-player="${match.label}"`).html());
                 let classDictionary = match.label_dict;
                 for(let personName in classDictionary) {
@@ -60,7 +60,7 @@ function init() {
     });
 
     $("#submitBtn").on('click', function (e) {
-        dz.processQueue();		
+        dropz.processQueue();		
     });
 }
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
     console.log( "ready!" );
     $("#error").hide();
     $("#resultHolder").hide();
-    $("#divClassTable").hide();
+    $("#probabilityTable").hide();
 
     init();
 })
