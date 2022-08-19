@@ -46,7 +46,7 @@ function init() {
                 $("#error").hide();
                 $("#resultDiv").show();
                 $("#probabilityTable").show();
-                $("#resultHolder").html($(`[data-player="${match.label}"`).html());
+                $("#resultDiv").html($(`[data-player="${server_response.label}"`).html());
                 let labelDict = server_response.label_dict;
                 for(let footballer in labelDict) {
                     let item = labelDict[footballer];
