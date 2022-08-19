@@ -36,22 +36,22 @@ text-align: center;
 }
 
 #classTable {
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-border-collapse: collapse;
-width: 100%;
-}
-
-#classTable td, #classTable th {
-border: 1px solid #ddd;
-padding: 8px;
-}
-
-#classTable th {
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: left;
-background-color: rgba(214, 50, 9, 0.692);
-color: white;
-}
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  }
+  
+  #classTable td, #classTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  }
+  
+  #classTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgba(214, 50, 9, 0.692);
+  color: white;
+  }
 
 /* ifunanyaScript */
