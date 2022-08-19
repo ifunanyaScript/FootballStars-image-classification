@@ -93,7 +93,7 @@
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-12 mx-auto">
-                        <form action="/file-upload" class="dropzone" id="dropzone">
+                        <form action="/file-upload" class="dropzone" id="dropz">
                             <div class="dz-message needsclick">
                                 <img src="./images/placeholder.png" width="50vw" height="50vw"><br>
                                 <span class="note needsclick">Drag and drop image here, or click to upload.</span>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-3 mx-auto">
-                        <button id="submitBtn" type="button" class="btn btn-success" style="background-color: rgba(214, 50, 9, 0.692);">Classify</button>
+                        <button id="submitButton" type="button" class="btn btn-success" style="background-color: rgba(214, 50, 9, 0.692);">Classify</button>
                     </div>
                 </div>
             </div>
@@ -112,8 +112,8 @@
                 <p>Cannot classify image!!! Unable to find a face with two eyes.</p>    
             </div>
 
-            <div class="col-sm-4" id="resultHolder"></div>
-            <div class="col-sm-4" id="divClassTable">
+            <div class="col-sm-4" id="resultDiv"></div>
+            <div class="col-sm-4" id="probabilityTable">
                 <table id="classTable">
                         <tr>
                             <th>Player</th>
@@ -121,27 +121,27 @@
                         </tr>
                         <tr>
                             <td>C. Ronaldo</td>
-                            <td id="score_cristiano_ronaldo"></td>
+                            <td id="probab_cristiano_ronaldo"></td>
                         </tr>
                         <tr>
                             <td>K. Benzema</td>
-                            <td id="score_karim_benzema"></td>
+                            <td id="probab_karim_benzema"></td>
                         </tr>
                         <tr>
                             <td>L. Messi</td>
-                            <td id="score_leo_messi"></td>
+                            <td id="probab_leo_messi"></td>
                         </tr>
                         <tr>
                             <td>M. Salah</td>
-                            <td id="score_mohamed_salah"></td>
+                            <td id="probab_mohamed_salah"></td>
                         </tr>
                         <tr>
                             <td>R. Lewandoski</td>
-                            <td id="score_robert_lewandoski"></td>
+                            <td id="probab_robert_lewandoski"></td>
                         </tr>
                         <tr>
                             <td>Z. Ibrahimovic</td>
-                            <td id="score_zlatan_ibrahimovic"></td>
+                            <td id="probab_zlatan_ibrahimovic"></td>
                         </tr>
                 </table>
             </div>
