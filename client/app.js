@@ -1,7 +1,7 @@
 Dropzone.autoDiscover = false;
 
 function init() {
-    let dropz = new Dropzone("#dropzone", {
+    let dropz = new Dropzone("#dropz", {
         url: "/",
         maxFiles: 1,
         addRemoveLinks: true,
@@ -26,40 +26,40 @@ function init() {
 
             console.log(data);
             if (!data || data.length==0) {
-                $("#resultHolder").hide();
-                $("#divClassTable").hide();                
+                $("#resultDiv").hide();
+                $("#probabilityTable").hide();                
                 $("#error").show();
                 return;
             }
             let footballers = ["cristiano_ronaldo", "karim_benzema", "lionel_messi", "mohammed_salah", "robert lewandoski", "zlatan_ibrahimovic"];
             
-            let match = null;
+            let server_response = null;
             let bestScore = -1;
             for (let i=0;i<data.length;++i) {
-                let maxScoreForThisClass = Math.max(...data[i].label_probability);
-                if(maxScoreForThisClass>bestScore) {
-                    match = data[i];
-                    bestScore = maxScoreForThisClass;
+                let maxScoreForThisLabel = Math.max(...data[i].label_probability);
+                if(maxScoreForThisLabel>bestScore) {
+                    server_response = data[i];
+                    bestScore = maxScoreForThisLabel;
                 }
             }
-            if (match) {
+            if (server_response) {
                 $("#error").hide();
                 $("#resultDiv").show();
                 $("#probabilityTable").show();
                 $("#resultHolder").html($(`[data-player="${match.label}"`).html());
-                let classDictionary = match.label_dict;
-                for(let personName in classDictionary) {
-                    let index = classDictionary[personName];
-                    let probabilityScore = match.label_probability[index];
-                    let elementName = "#score_" + personName;
-                    $(elementName).html(probabilityScore);
+                let labelDict = server_response.label_dict;
+                for(let footballer in labelDict) {
+                    let item = labelDict[footballer];
+                    let probabilityScore = server_response.label_probability[item];
+                    let idName = "#probab_" + footballer;
+                    $(idName).html(probabilityScore);
                 }
             }
-            // dz.removeFile(file);            
+            // dropz.removeFile(file);            
         });
     });
 
-    $("#submitBtn").on('click', function (e) {
+    $("#submitButton").on('click', function (e) {
         dropz.processQueue();		
     });
 }
@@ -67,7 +67,7 @@ function init() {
 $(document).ready(function() {
     console.log( "ready!" );
     $("#error").hide();
-    $("#resultHolder").hide();
+    $("#resultDiv").hide();
     $("#probabilityTable").hide();
 
     init();
