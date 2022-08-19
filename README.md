@@ -13,8 +13,8 @@ The model for the classifcation is an SVM classifier. Trained the model with ove
 A web app in which you can drag and drop an image and get a classification result.
 ##### Model deployment to AWS
 Using Python Flask server and nginx web server, I hosted the web app on AWS EC2 instance [here](http://ec2-44-203-185-121.compute-1.amazonaws.com/).  
-
-
-
-
-Apparently, there were series of stages passed to achieve the final result of this project. All the jupyter notebooks and source codes used to work on the project are all available in this repository. Feel free to fork this repo and drop a ⭐!
+<br>
+<br>
+<br>
+Apparently, there were series of stages passed to achieve the final result of this project. All the jupyter notebooks and source codes used to work on the project are 
+all available in this repository. Feel free to fork this repo and drop a ⭐!
