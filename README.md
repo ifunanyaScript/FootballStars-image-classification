@@ -26,11 +26,13 @@ All the source codes and files used to develop the web app is available [here](h
 I built a backend server using python Flask. This server recieves requests from the frontend, and returns a response.  
 In the server the pre trained model and other essential artifacts are loaded. Whenever a request(image) comes in, the server directs the image to the model.  
 The model spits out a classification result which the server in turn returns to the front end.  
-The server and it's dependencies are available [here]()
+The server and it's dependencies are available [here](https://github.com/ifunanyaScript/FootballStars-image-classification/tree/main/server).
+
 ##### Model deployment to AWS
 Using Python Flask server and nginx web server, I hosted the web app on AWS EC2 instance [here](http://ec2-44-203-185-121.compute-1.amazonaws.com/).  
 <br>
 <br>
 <br>
 Apparently, there were series of stages passed to achieve the final result of this project. All the jupyter notebooks and source codes used to work on the project are 
-all available in this repository. Feel free to fork this repo and drop a ⭐!
+all available in this repository. Feel free to fork this repo.  
+Drop a ⭐ on your way out, Thanks!
