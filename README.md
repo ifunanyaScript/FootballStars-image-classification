@@ -15,7 +15,7 @@ Extracting features from an image is achievable by treating said image as a 2D s
 
 ##### Model training
 Normally, The go to for computer vision is CNNs however, there are other approaches that could suffice and even achieve amazing accuracy.
-Apparently, this is a classification problem, hence I used an SVM classifier as the model. The model was trained with over 500 images of the 6 footballers. The model achieved over 91% accuracy on the test dataset. The notebook for model building is available [here](https://github.com/ifunanyaScript/FootballStars-image-classification/blob/main/notebooks/model_development.ipynb).  
+Apparently, this is a classification problem, hence I used an SVM classifier as the model. The model was trained with over 500 images of the 6 footballers. The model achieved over 96% accuracy on the test dataset. The notebook for model building is available [here](https://github.com/ifunanyaScript/FootballStars-image-classification/blob/main/notebooks/model_development.ipynb).  
 ALso the trained model was saved and exported as a pickle file. The file is available [here](https://github.com/ifunanyaScript/FootballStars-image-classification/blob/main/model/model.pickle).
 
 ##### Web app development
